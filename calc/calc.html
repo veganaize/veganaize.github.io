@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head><title></title>
+<link rel="stylesheet" type="text/css" href="sci-calc.css">
+<style>
+    *{margin:0;padding:0;}
+    body {margin:0;padding:0;
+        background-color:rgb(47, 41, 80);
+        color:rgb(143, 132, 163);
+        align-content:center;
+    }
+</style>
+<script></script>
+</head>
+<body>
+<br />
+
+<div id="sci-calc-app">
+    <div id="view-window">
+    </div> <!-- view-window -->
+    <div id="history-area">
+    </div> <!-- history-area -->
+    <div id="input-area">
+        <textarea placeholder="placeholder" spellcheck="false"></textarea>
+    </div> <!-- input-area -->
+    <div id="options">
+        <select id="function-list">
+            <option value="math">math</option>
+            <option value="trig">trig</option>
+            <option value="number">number</option>
+        </select>
+        <select id="trig-mode">
+            <option value="deg">deg</option>
+            <option value="rad">rad</option>
+        </select>
+        <select id="number-format">
+            <option value="float">float</option>
+            <option value="sci">sci</option>
+        </select>
+    </div> <!-- options -->
+    <div id="keypad-area"><!--
+    --><div id="button-underlay"><!--
+            --><span class="button button-shadow">log</span><!--
+            --><span class="button button-shadow">log</span><!--
+            --><span class="button button-shadow">log</span><!--
+            --><span class="button button-shadow">log</span><!--
+            --><span class="button button-shadow">log</span><!--
+
+            --><span class="button button-shadow">log</span><!--
+            --><span class="button button-shadow">log</span><!--
+            --><span class="button button-shadow">log</span><!--
+            --><span class="button button-shadow">log</span><!--
+            --><span class="button button-shadow">log</span><!--
+    --></div> <!-- button-underlay -->
+        <div id="button-overlay"><!--
+        --><div id="first-two-rows"><!--
+        --><span class="button ns">x&#xb2;</span><!--
+        --><span class="button ns">&#8730;x</span><!--
+        --><span class="button ns">xʸ</span><!--
+            TODO: FIX THIS 'x' MAKE IT SUPERSCRIPT
+        --><span class="button ns">x&#8730;y</span><!--
+                --><span class="button ns">log</span><!--
+
+                --><span class="button ns">log</span><!--
+                --><span class="button ns">log</span><!--
+                --><span class="button ns">log</span><!--
+                --><span class="button ns">log</span><!--
+                --><span class="button ns">log</span><!--
+        --></div> <!-- first-two-rows -->
+        </div> <!-- button-overlay -->
+    </div> <!-- keypad -->
+</div> <!-- sci-calc-app -->
+
+<br />
+</center>
+</body>
+</html>

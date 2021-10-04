@@ -1,0 +1,35 @@
+/*
+ *  CSS file for login-page
+ */
+
+@media screen and (max-width:500px) {
+  /* smaller screens */
+
+}
+
+@media screen and (max-width:960px) {
+  /* bigger screens */
+}
+
+#login-pane {
+    margin:auto;
+    width:212px;
+    height:345px;
+    background:linear-gradient(to bottom left, #1e83d1, #1658a6);
+    border:2px solid #50a1e2;
+    border-radius:1px;
+}
+#top-bar {
+    position:relative;
+    max-width:inherit;
+    border-bottom:2px solid #50a1e2;
+    height:18px;
+    padding:8px;
+}
+.top-circle {
+    position:absolute;
+    border:3px solid #C0E8FF;
+    width:11px;
+    height:11px;
+    border-radius:50%;
+}

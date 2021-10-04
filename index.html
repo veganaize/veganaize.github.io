@@ -1,30 +1,128 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>veganaiZe.github.io</title>
-  <link rel="canonical" href="https://veganaize.github.io/" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/7102064">
-  <meta property="og:description" content="The Windowing Web - Welcome to Your Desktop">
-  <meta property="og:title" content="veganaiZe">
-  <meta name="twitter:title" content="veganaiZe">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <style>
-    body {
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-    }
-  </style>
+    <meta charset="utf-8">
+    <title>The Windowing Web by veganaiZe</title>
+    <link rel="icon" type="image/png" href="/veganaiZe-32.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" media="all" rel="stylesheet" type="text/css" />
 </head>
-<body>
-  <div class="container">
-    <h1><a href="https://github.com/veganaize/">veganaiZe</a></h1>
-    <h3>please; welcome; thank you</h3>
-    <ul>
-      <li><a href="https://www.youtube.com/user/TheMadman420">Tubeyou channel</a></li>
-      <li><a href="https://stackoverflow.com/users/5039027/veganaize">Stankoverflow person</a></li>
-      <li><a href="https://github.com/veganaize">Gothub profile</a></li>
-    </ul>
-  </div>
+<body onmousedown="desktopBackground();" oncontextmenu="desktopMenu();event.stopPropagation();event.preventDefault();return false;">
+    <div id="wrapper" style="height:100%">
+        <div id="taskbar" onmousedown="stopMenu();" oncontextmenu="event.stopPropagation();event.preventDefault();">
+            <div id="startbutton" class="taskbar-button" onmousedown="startMenu();event.stopPropagation();">
+                <i class="mdi mdi-windows"></i>
+            </div>
+            <div id="click-here" class="taskbar-button">
+                <i class="mdi mdi-arrow-left-bold"></i>
+            </div>
+        </div>
+        <!-- <object name="foo" type="text/html" data="apps/Startmenu.xhtml"></object> -->
+        <div id="menu-outer-border" class="pointer" onclick="event.stopPropagation();"
+                                                    onmousedown="event.stopPropagation();">
+            <div id="menu-background" class="">
+                <div id="menu-list-app-outer-border">
+                    <div id="menu-list-applications">
+                        <div class="app-row ns" onclick="startApp('Notepad');">
+                            <i class="material-icons blue">assignment</i>
+                            <p>Notepad</p>
+                        </div>
+                        <div class="app-row ns">
+                            <i class="material-icons handi" style="color:grey;">accessible</i>
+                            <p style="color:grey;">Accessiblity</p>
+                            <div class="shadow-right"></div>
+                        </div>
+                        <div class="app-row ns">
+                            <i class="material-icons green" style="color:grey;">android</i>
+                            <p style="color:grey;">Android</p>
+                        </div>
+                        <div class="app-row ns">
+                            <i class="mdi mdi-bell gold" style="color:grey;"></i>
+                            <p style="color:grey;">Reminders</p>
+                        </div>
+                        <a href="https://stackoverflow.com/users/5039027/veganaize">
+                            <div class="app-row ns">
+                                <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico" />
+                                <p>Stack Overflow</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/veganaize-%E2%98%BB">
+                            <div class="app-row ns">
+                                <img src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" />
+                                <p>LinkedOut</p>
+                            </div>
+                        </a>
+                        <a href="http://www.guru.com/freelancers/veganaize/portfolio">
+                            <div class="app-row ns">
+                                <img src="https://icons.duckduckgo.com/ip2/www.guru.com.ico" />
+                                <p>Guru</p>
+                            </div>
+                        </a>
+                        <a href="http://stackexchange.com/users/6512162/veganaize?tab=accounts">
+                            <div class="app-row ns">
+                                <img src="https://cdn.sstatic.net/Sites/stackexchange/img/favicon.ico" />
+                                <p>Stack Exchange</p>
+                            </div>
+                        </a>
+                        <a href="https://www.upwork.com/o/profiles/users/_~0148f853bdf5ca3260/">
+                            <div class="app-row ns">
+                                <img src="https://www.upwork.com/favicon.ico" />
+                                <p>Upwork</p>
+                            </div>
+                        </a>
+                        <a href="https://www.khanacademy.org/profile/veganaiZe">
+                            <div class="app-row ns">
+                                <img src="https://www.khanacademy.org/favicon.ico?leaf" />
+                                <p>Khan Academy</p>
+                            </div>
+                        </a>
+                        <a href="https://www.youtube.com/user/TheMadman420">
+                            <div class="app-row ns">
+                                <img src="https://s.ytimg.com/yts/img/favicon-vflz7uhzw.ico" />
+                                <p>YouTube</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/veganaiZe">
+                            <div class="app-row ns">
+                                <img src="https://github.githubassets.com/favicons/favicon.png" />
+                                <p>GitHub</p>
+                            </div>
+                        </a>
+                        <a href="https://sourceforge.net/u/iysil/profile/">
+                            <div class="app-row ns">
+                                <img src="https://a.fsdn.com/con/img/sandiego/logo-180x180.png" />
+                                <p>SourceForge</p>
+                            </div>
+                        </a>
+                        <div id="menu-list-searchbox" class="caret">
+                            <span class="material-icons pointer" id="search-glass">search</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-emblem">
+                    <img src="veganaiZe-av.gif" width="46" height="46" />
+                </div>
+                <div class="hrule" id="hr1">
+                    <hr class="hr-top" />
+                    <hr class="hr-bottom" />
+                </div>
+                <div class="hrule" id="hr2">
+                    <hr class="hr-top" />
+                    <hr class="hr-bottom" />
+                </div>
+            </div>
+        </div>
+
+        <div id="workarea">
+        </div> <!-- workarea -->
+    </div> <!-- wrapper -->
+
+    <script src="index.js"></script>
+    <script src="window.js"></script>
+    <link href="css/window.css" media="all" rel="stylesheet" type="text/css" />
 </body>
-</html>
+<i class="material-icons blue">
+<i class="material-icons handi">
+<i class="material-icons green">
+</html> <!-- Implemented by veganaiZe -->

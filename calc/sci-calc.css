@@ -1,0 +1,144 @@
+/* Scientific Calculator (style):
+ * Simllar to: http://www.infinitysw.com/ets
+ * This web implementation was crafted by veganaiZe
+ */
+.ns {
+    user-select:none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+/* The entire background area of the app */
+#sci-calc-app {
+    position:relative;
+    margin:auto;
+    background-color:white;
+    color:black;
+    width:260px;
+    height:368px;
+    cursor:default;
+    font-weight:bold;
+}
+
+/*=*=*=*=*=*=*=*=*=*=* LCD DISPLAY WINDOW *=*=*=*=*=*=*/
+/* view-window: *****************************************
+ * Holds the entire display area,
+ * includes input & history areas.
+ */
+#view-window {
+     position:absolute;
+     margin:1px;
+     background-color:#FFFFC8;
+     color:black;
+     width:252px;
+     height:99px;
+     border:3px solid black;
+     border-radius:5px;
+}
+/* input-area:
+ * Bottom part of the view-window. */
+#input-area {
+    position:absolute;
+    top:47px;
+    width:250px;
+    height:50px;
+}
+#input-area textarea {
+    position:absolute;
+    top:4px;
+    left:4px;
+    width:246px;
+    height:44px;
+    border:1px solid rgb(130,135,144);
+    resize:none;
+    outline:none; /* Removes blue glow. */
+    background:none;
+    overflow:auto;
+    font-weight:700;
+    font-family:Arial,sans-serif;
+    padding:2px;
+    padding-top:4px;
+}
+/* history-area:
+ * Top part of the view-window, where the
+ * expression is evaluated & displayed. */
+#history-area {
+    heigh:43px;
+    width:250px;
+}
+/*************************************** view-window **/
+#history-icon {
+    position:absolute;
+
+}
+/*=*=*=*=*=*=*=* END OF LCD DISPLAY WINDOW *=*=*=*=*=*=*/
+
+/* The area between the view-window & the keypad */
+#options {
+    position:absolute;
+    top:111px;
+    bottom:131px;
+    margin:1px;
+}
+#function-list {
+    width:97px;
+}
+#trig-mode {
+    width:73px;
+}
+#number-format {
+    width:79px;
+}
+/* The standard button matrix */
+#keypad-area {
+    position:absolute;
+    top:135px;
+    width:258px;
+}
+#button-underlay {
+    position:absolute;
+    top:2px;
+    left:2px;
+}
+#button-overlay {
+    position:absolute;
+    top:0px;
+    left:0px;
+
+}
+/* General button style */
+.button {
+    position:relative;
+    display:inline-block;
+    margin:1px;
+    margin-right:3px;
+    margin-bottom:3px;
+    padding-top:1px;
+    border:1px solid rgb(20,50,100);
+    width:45px;
+    height:26px;
+    border-radius:3px;
+    background:linear-gradient(to bottom right,
+            rgb(176,203,234),
+            rgb(51,121,200)
+    );
+    color:#FFFFFF;
+    text-align:center;
+    text-decoration:none;
+    cursor:default;
+    font-size:12px;
+}
+.button:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+.button-shadow {
+    background:rgb(20,50,100);
+    color:rgb(20,50,100);
+    margin:1px;
+    margin-right:3px;
+    margin-bottom:3px;
+}

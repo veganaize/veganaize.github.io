@@ -1,0 +1,37 @@
+<div    id="notepad"
+        class="ws-overlappedwindow ns"
+        onmousedown="event.stopPropagation();"
+        onclick="event.stopPropagation();"
+        oncontextmenu="event.preventDefault();"
+        >
+        <div class="titlebar" onmousedown="startDrag(event)" ontouchstart="startDrag(event)"
+            ><i class="material-icons md-18 float-left"
+                style="line-height:18px;
+                       cursor:default;
+                       ">assignment</i
+            >Notepad<span class="closex float-right"
+                          onclick="removeWindow('notepad');event.stopPropagation();"
+                    >x</span></div>
+        <!-- /titlebar -->
+        <!-- TODO: CONVERT THIS TO A UL LIST INLINE-BLOCK NAV-STYLE MENU -->
+        <div class="menubar"><span class="menubar-item">File</span
+                            ><span class="menubar-item">Edit</span
+                            ><span class="menubar-item">View</span
+                            ><span class="menubar-item">Help</span
+        ></div>
+        <!-- /menubar -->
+        <textarea
+                wrap="soft"
+                autofocus="true"
+                style="	display:block;
+                        resize:none;
+                        font-family:Consolas, 'Lucida Console', Monaco, monospace;
+                        font-size:11pt;
+                        width:390px;
+                        height:246px;
+                        top:0px;right:0px;bottom:0px;left:0px;
+                        margin-left:auto;
+                        margin-right:auto;
+                        padding:4px;
+        "></textarea>
+</div> <!-- /notepad -->
