@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Compensation Data</title>
+    <meta charset="utf-8" />
+    <title>Compensation Data</title>
 </head>
 <body>
+<div id="table"></div>
+
+<script>
+    loadTable();
+    function loadTable() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            var lines = this.responseText.split('\n');
+            var table = '<table><tr>';
+            var row = lines[0].split(' | ');
+            for (var i = 0; i < row.length; i++)
+                table += '<th>'+ row[i] +'</th>';
+            table += '</tr>';
+            for (i = 2; i < lines.length; i++) {
+                table += '<tr>';
+                row = lines[i].split(' | ');
+                for (var j = 0; j < row.length; j++)
+                    table += '<td>'+ row[j] +'</td>';
+                table += '</tr>';
+            }
+
+            table += '</table>';
+
+            document.getElementById("table").innerHTML = table;
+        }
+
+        xhttp.open("GET",
+                   "https://raw.githubusercontent.com/Gear61/Tech-Career-Growth-Learning-Resources-And-Roadmaps/main/Compensation.md",
+                   true);
+        xhttp.send();
+    }
+</script>
 </body>
 </html>
