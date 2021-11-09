@@ -3,6 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <title>Compensation Data</title>
+    <style>
+        body {
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        }
+        td {
+            padding: 6px 13px;
+        }
+        tr {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) {
+            background-color: #eeeeee;
+        }
+    </style>
 </head>
 <body>
 <div id="table"></div>
@@ -18,6 +32,7 @@
             for (var i = 0; i < row.length; i++)
                 table += '<th>'+ row[i] +'</th>';
             table += '</tr>';
+
             for (i = 2; i < lines.length; i++) {
                 table += '<tr>';
                 row = lines[i].split(' | ');
@@ -27,8 +42,7 @@
             }
 
             table += '</table>';
-
-            document.getElementById("table").innerHTML = table;
+            document.getElementById('table').innerHTML = table;
         }
 
         xhttp.open("GET",
