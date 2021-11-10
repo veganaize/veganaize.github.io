@@ -32,6 +32,11 @@
     loadTable();
     function loadTable() {
         var xhttp = new XMLHttpRequest();
+        xhttp.open("GET",
+                   "https://raw.githubusercontent.com/Gear61/Tech-Career-Growth-Learning-Resources-And-Roadmaps/main/Compensation.md",
+                   true);
+        xhttp.send();
+
         xhttp.onload = function() {
             var icons = ['&#xe7ee;', '&#xe55f;', '&#xe878;',
                          'attach_money', 'trending_up', 'add',
@@ -55,11 +60,6 @@
             table += '</table>';
             document.getElementById('table').innerHTML = table;
         }
-
-        xhttp.open("GET",
-                   "https://raw.githubusercontent.com/Gear61/Tech-Career-Growth-Learning-Resources-And-Roadmaps/main/Compensation.md",
-                   true);
-        xhttp.send();
     }
 </script>
 </body>
