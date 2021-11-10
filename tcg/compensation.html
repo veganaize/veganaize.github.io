@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Compensation Data</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <style>
         body {
             font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
@@ -26,11 +27,15 @@
     function loadTable() {
         var xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
+            var icons = ['&#xe7ee;', '&#xe55f;', '&#xe878;',
+                         'attach_money', 'trending_up', 'add',
+                         'shield', 'school', 'shopping_cart'];
             var lines = this.responseText.split('\n');
             var table = '<table><tr>';
             var row = lines[0].split(' | ');
             for (var i = 0; i < row.length; i++)
-                table += '<th>'+ row[i] +'</th>';
+                table += '<th><i class="material-icons">'+ icons[i] +'</i><br />'+
+                         row[i] +'</th>';
             table += '</tr>';
 
             for (i = 2; i < lines.length; i++) {
