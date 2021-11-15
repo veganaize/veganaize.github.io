@@ -37,12 +37,20 @@ xhttp.send();
 
 
 xhttp.onload = function() {
+    var lines = this.responseText.split('\n');
+    var table = build_table(lines);
+    document.getElementById('table').innerHTML = table;
+}
+
+
+function build_table(lines) {
     var icons = ['&#xe7ee;', '&#xe55f;', '&#xe878;',
                  'attach_money', 'trending_up', 'add',
                  'shield', 'school', 'shopping_cart'];
-    var lines = this.responseText.split('\n');
+
     var table = '<table><tr>';
     var row = lines[0].split(' | ');
+
     for (var i = 0; i < row.length; i++)
         table += '<th><i class="material-icons">'+ icons[i] +'</i><br />'+
                  row[i] +'</th>';
@@ -56,8 +64,7 @@ xhttp.onload = function() {
         table += '</tr>';
     }
 
-    table += '</table>';
-    document.getElementById('table').innerHTML = table;
+    return table += '</table>';
 }
 </script>
 </body>
