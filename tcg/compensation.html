@@ -51,9 +51,14 @@ function build_table(lines) {
     var table = '<table><tr>';
     var row = lines[0].split(' | ');
 
-    for (var i = 0; i < row.length; i++)
+    /* Process header row */
+    for (var i = 0; i < row.length; i++) {
+        row[i] = check_for_superscript(row[i]);
+        //console.log(row[i]);
         table += '<th><i class="material-icons">'+ icons[i] +'</i><br />'+
                  row[i] +'</th>';
+    }
+
     table += '</tr>';
 
     for (i = 2; i < lines.length; i++) {
@@ -65,6 +70,20 @@ function build_table(lines) {
     }
 
     return table += '</table>';
+}
+
+
+function check_for_superscript(cell) {
+    //console.log(cell);
+    var left_bracket = cell.indexOf('[');
+    //console.log(left_bracket);
+    if (left_bracket > -1) {
+        //console.log(cell.slice(0, left_bracket) + cell.slice(left_bracket+4));
+        return cell.slice(0, left_bracket) + cell.slice(left_bracket+4);
+    }
+
+    //console.log(cell);
+    return cell;
 }
 </script>
 </body>
