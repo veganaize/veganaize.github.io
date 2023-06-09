@@ -1,0 +1,35 @@
+@import "icons.css";
+@import "window.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+textarea {
+    resize:none;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration:  none; }
+
+
+/* General Colors */
+.green {color:#6AB344;}
+.blue {color:skyblue;}
+.gold {color:rgb(176, 167, 41);}
+.red {color:rgb(100,0,0);}
+
+/* Pointers */
+.pointer {cursor:default;}
+.caret {cursor:text;}
+
+/* Floating classes */
+.float-left { float:left; }
+.float-right { float:right; overflow:auto; }

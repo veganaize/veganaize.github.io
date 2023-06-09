@@ -1,0 +1,209 @@
+#taskbar {
+    z-index:16777270;
+    position:relative;
+    display:block;
+    height:30px;
+    background-color:rgba(45,53,90,0.9);
+    box-shadow: 0px 0px 10px 4px #000000;
+}
+.taskbar-button { /* Entire button div */
+    height:30px;
+    width:40px;
+    position:relative;
+    display:inline-block;
+    background-color:transparent;
+    color:#FFFFFF;
+}
+.taskbar-button i { /* Webfont icon inside of the button */
+    display:block;
+    margin:auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:18px;
+}
+/* Startbutton specifics here */
+#startbutton {
+    transition:color 1.8s;
+    transition:background-color .16s;
+}
+#startbutton:hover {
+    color:rgba(100,0,0,0.8);
+    background-color:rgba(0,0,0,0.8);
+}
+
+/* Start Menu */
+#menu-outer-border {
+    z-index:16777271;
+    position:absolute;
+    display:none;
+    border:1px solid #4A5586;
+    width:400px;
+    height:470px;
+    border-radius:5px;
+    animation:fadeIn .4s;
+    transition: all 2s ease-in-out;
+    box-shadow: 12px 12px 24px 4px black;
+}
+#menu-background {
+    border:1px solid #7484CC;
+    width:398px;
+    height:468px;
+    background-color:rgba(94, 108, 175, 0.9);;
+    border-radius:5px;
+    position:absolute;
+}
+
+/* Start Menu - Left Side */
+#menu-list-app-outer-border {
+    border:1px solid #A0A0A0;
+    border-radius:5px;
+    width:245px;
+    position:absolute;
+    top:5px;
+    left:5px;
+    bottom:5px;
+
+}
+#menu-list-applications {
+    border:1px solid black;
+    width:241px;
+    top:0px;
+    bottom:0px;
+    background-color:#FFFFFF;
+    color:black;
+    border-radius:5px;
+    position:absolute;
+    padding-left:1px;
+    padding-right:1px;
+    padding-top:1px;
+    padding-bottom:6px;
+    box-shadow:1px 1px 12px #222222 inset;
+}
+#menu-list-applications a {
+    cursor:default;
+}
+.app-row {
+    color:#111111;
+    border:1px solid transparent;
+    font-size:12px;
+    height:2em;
+    padding-top:6px;
+}
+.app-row i, .app-row p, .app-row img {
+    display:inline-block;
+    vertical-align:middle;
+    padding-left:6px;
+}
+.app-row i, .app-row img {
+    height:22px;
+    width:22px;
+}
+.app-row p {
+    font-family:"Segoe UI", Tahoma, Arial, Helvetica, sans-serif;
+    font-weight:600;
+    letter-spacing:.06em;
+}
+.app-row:hover {
+    border:1px solid rgb(124,161,205);
+    border-radius:3px;
+    /*background-color:rgba(195,220,252,0.3);*/
+    background:linear-gradient(to bottom,rgba(234,243,252,0.9),rgba(193,219,252,0.9));
+    box-shadow:6px 2px 9px -6px rgba(50,50,50,.8) inset;
+}
+#menu-list-searchbox {
+    border:1px solid;
+    border-color: rgb(100,100,100) rgb(147,147,147) rgb(147,147,147) rgb(100,100,100);
+    position:absolute;
+    width:225px;
+    height:24px;
+    bottom:5px;
+    left:5px;
+}
+.taskbar-menu-icon-box-left {
+    width:5px;
+    height:5px
+}
+.taskbar-menu-icon-box-right {
+    width:7px;
+    height:6px;
+}
+
+/* Start Menu - Right Side */
+#menu-emblem {
+    background-color:rgba(0,0,0,0.45);
+    color:white;
+    width:57px;
+    height:57px;
+    border-radius:5px;
+    position:absolute;
+    right:43px;
+    top:7px;
+}
+#menu-emblem img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+hr {
+    width:75%;
+    border:0;
+    height:1px;
+    display:block;
+    margin:0.5em auto;
+}
+.hr-top {
+    background-image:linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
+    padding-bottom:0;
+    margin-bottom:0;
+}
+.hr-bottom {
+    background-image:linear-gradient(to right, rgba(199,199,199,0), rgba(199,199,199,0.75), rgba(199,199,199,0));
+    padding-top:0;
+    margin-top:0;
+}
+.hrule {
+    position:absolute;
+    right:0px;
+    width:148px;
+}
+#hr1 { top:169px;}
+#hr2 { top:243px;}
+#search-glass {
+    position:absolute;
+    right:5px;
+    transform:scaleX(-1);
+    color:dodgerblue;
+}
+#avatar {
+    font-size:48px;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+    position:absolute;
+    text-align:center;
+    line-height:56px;
+
+}
+
+.handi {color:#65B9F3;}
+
+/* <- Click Here To Begin */
+#click-here {
+    position:absolute;
+    right:0px;
+
+}
+
+.ns {
+    user-select:none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}

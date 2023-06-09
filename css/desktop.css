@@ -1,0 +1,26 @@
+@import "taskbar.css";
+
+
+@keyframes fadeIn {
+    from { opacity:0; }
+      to { opacity:1; }
+}
+@keyframes fadeOut {
+    from { opacity:1; }
+      to { opacity:0; }
+}
+
+.fade {
+    transition:opacity 2s;
+    -webkit-transition:opacity 2s;
+    -o-transition:opacity 2s;
+    -moz-transition:opacity 2s;
+    opacity:0;
+}
+
+body{
+    background:#121212 url("../octotakeover_lite.jpg") center/cover no-repeat fixed;
+    color:#FFFFFF;
+    cursor:default;
+    overflow:hidden;
+}
