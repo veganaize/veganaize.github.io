@@ -1,9 +1,12 @@
 function createWindow(wTitle, wStyle, wIcon, wCursor,
-                      wY, wX, y, x) {
+                      wY, wX, y, x)
+{
+    document.body.style.cursor = 'progress'
     var httpRequest = new XMLHttpRequest()
 
     if(!httpRequest) {
         alert("Couldn't create window; Network or server is down.")
+        document.body.style.cursor = ''
         return false
     }
 
@@ -17,7 +20,11 @@ function createWindow(wTitle, wStyle, wIcon, wCursor,
             if(httpRequest.status === 200) {
                 document.getElementById("workarea").innerHTML +=
                         httpRequest.responseText
-            } else { alert('There was a problem displying the window.') }
+                document.body.style.cursor = ''
+            } else {
+                document.body.style.cursor = ''
+                alert('There was a problem displying the window.')
+            }
         }
     }
 }
